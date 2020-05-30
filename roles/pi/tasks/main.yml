@@ -20,3 +20,14 @@
   apt:
     deb: https://repo.zabbix.com/zabbix/5.0/raspbian/pool/main/z/zabbix-release/zabbix-release_5.0-1+buster_all.deb
 
+- name: install zabbix packages
+  apt:
+    name:
+      - zabbix-server-mysql
+      - zabbix-frontend-php
+      - zabbix-apache-conf
+      - zabbix-agent
+    state: present
+    update_cache: true
+    
+
